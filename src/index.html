@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>High Pass</title>
+  <link href="img/favicons/favicon.png" type="image/png" sizes="16x16" rel="icon">
+  <link href="css/styles.min.css" rel="stylesheet">
+  <link href="css/destyle.css" rel="stylesheet">
+  <link href="fonts/roboto/roboto-bold.woff2" rel="preload" crossorigin=""  as="font">
+  <link href="fonts/roboto/roboto-regular.woff2" rel="preload" crossorigin=""  as="font">
+  <link href="fonts/ttfirsneue/tt-firs-neue-bold.woff2" rel="preload" crossorigin=""  as="font">
+  <link href="fonts/ttfirsneue/tt-firs-neue-regular.woff2" rel="preload" crossorigin=""  as="font">
+</head>
+<body>
+<main>
+    <!-- SITE HEADER -->
+@include('html/components/_header.html')
+
+    <!-- SITE HERO -->
+@include('html/components/_hero.html')
+
+    <!-- SITE ABOUT -->
+@include('html/components/_about.html')
+
+    <!-- SITE PROJECTS -->
+@include('html/components/_projects.html')
+
+    <!-- SITE CONTACTS -->
+@include('html/components/_contacts.html')
+</main>
+
+  <!-- SITE FOOTER -->
+@include('html/components/_footer.html')
+
+<script src="js/main.min.js"></script>
+<script src="https://api-maps.yandex.ru/2.1/?apikey=ваш API-ключ&lang=ru_RU" type="text/javascript"></script>
+</body>
+
+
+</html>

@@ -1,0 +1,45 @@
+<section class="site-contacts site__contacts">
+  <div class="container site-contacts__container">
+    <div class="contacts-left site-contacts__left">
+      <h2 class="title contacts-left__title">
+        Контакты
+      </h2>
+      <div class="contacts-left__box left-box active">
+        <h3 class="left-box__title">
+          Студия "High pass"
+        </h3>
+        <address class="left-box__address">
+          107045, Москва, Даев переулок, дом 41, бизнес-центр "Даев Плаза", этаж 8, офис &#8470;&nbsp;82
+        </address>
+        <svg class="left-box__call" width="22" height="22" viewBox="0 0 22 22">
+          <use xlink:href="img/sprites/sprite.svg#icon-call"/>
+        </svg>
+        <a class="left-box__tel" href="#">+7 (495) 42-423-532</a>
+        <button class="left-box__close"></button>
+      </div>
+      <div class="map" id="map"></div>
+    </div>
+    <div class="contacts-right site-contacts__right">
+      <h3 class="contacts-right__title">
+        Оставить заявку
+      </h3>
+      <p class="contacts-right__desc">
+        Оставьте ваши данные, указав в&nbsp;графе &laquo;Комментарий&raquo; желаемые время и&nbsp;дату съемки или другого мероприятия
+      </p>
+      <form class="contacts-right__form" id="contactsForm" name="form" method="get" action="#">
+        <ul class="contacts-right__list">
+          <li class="contacts-right__item">
+            <input class="contacts-right__name" id="name" name="name" type="text" placeholder="Имя" aria-label="Поле для ввода имени">
+          </li>
+          <li class="contacts-right__item">
+            <input class="contacts-right__email" id="email" name="email" type="email" placeholder="E-mail" aria-label="Поле для ввода E-mail">
+          </li>
+          <li class="contacts-right__item">
+            <textarea class="contacts-right__text" id="text" name="text" placeholder="Комментарий" aria-label="Поле для ввода текста"></textarea>
+          </li>
+        <button class="btn contacts-right__button" type="submit">Отправить</button>
+      </ul>
+      </form>
+    </div>
+  </div>
+</section>
