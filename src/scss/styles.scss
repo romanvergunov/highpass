@@ -28,6 +28,8 @@ body {
 }
 
 .title {
+  margin: 0;
+  padding: 0;
   font-family: $secondFontFamily;
   font-weight: $textWeightBold;
   font-size: $textSizeSeventh;
@@ -35,6 +37,8 @@ body {
 }
 
 .desc {
+  margin: 0;
+  padding: 0;
   font-family: $primaryFontFamily;
   font-weight: $textWeightRegular;
   font-size: $textSizePrimary;
@@ -45,20 +49,39 @@ body {
 .btn {
   background-color: $primaryColor;
   color: $whiteColor;
-  border-radius: 8px;
 }
 
 .hashtag {
   position: absolute;
-  top: 8px;
-  right: 8px;
-  background-color: $sixthColor;
-  padding: 6px 13px;
-  border-radius: 16px;
-  color: $whiteColor;
-  font-weight: $textWeightRegular;
-  font-size: $textSizeFourth;
+  top: 6px;
+  right: 6px;
+  background-color: hsl(0deg, 0%, 20%);
+  padding: 7px 15px;
+  color: hsl(0deg, 0%, 100%);
+  font-weight: 400;
+  font-size: 14px;
   line-height: 16px;
+}
+
+.socials {
+  outline: none;
+}
+
+.socials svg {
+  fill: $fourthColor;
+  transition: fill $primaryTransition;
+}
+
+.socials:hover svg {
+  fill: $primaryColor;
+}
+
+.socials.focus-visible svg {
+  fill: $secondColor;
+}
+
+.socials:active svg {
+  fill: $thirdColor;
 }
 
 .container {
@@ -72,11 +95,9 @@ body {
 
 .header-top {
   background-color: $fifthColor;
-  border-bottom-left-radius: 24px;
-  border-bottom-right-radius: 24px;
 
   &__container {
-    height: 80px;
+    min-height: 80px;
     display: flex;
     align-items: center;
   }
@@ -96,7 +117,6 @@ body {
     bottom: -5px;
     color: $whiteColor;
     border: 1px solid $secondColor;
-    border-radius: 4px;
     transform: scaleX(0);
     transform-origin: left;
     transition: transform .3s ease-in-out;
@@ -111,6 +131,9 @@ body {
   width: 57%;
 
   &__list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
     display: flex;
     justify-content: space-between;
   }
@@ -140,7 +163,6 @@ body {
     bottom: -3px;
     color: $whiteColor;
     background: $secondColor;
-    border-radius: 4px;
     transform: scaleX(0);
     transform-origin: left;
     transition: transform .3s ease-in-out;
@@ -163,36 +185,20 @@ body {
 
 .socials-header {
   display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
   &__item:not(:last-child) {
     margin-right: 20px;
-  }
-
-  &__link {
-    outline: none;
-  }
-
-  &__link svg {
-  fill: $fourthColor;
-  transition: fill $primaryTransition;
-  }
-
-  &__link:hover svg {
-  fill: $primaryColor;
-  }
-
-  &__link.focus-visible svg {
-    fill: $secondColor;
-  }
-
-  &__link:active svg {
-    fill: $thirdColor;
   }
 }
 
 .header-search {
   display: none;
   outline: none;
+}
 
+.header-top {
   &__form {
     display: none;
     position: absolute;
@@ -251,7 +257,6 @@ body {
   &__cancel::before, &__cancel::after {
     background-color: $fifthColor;
   }
-
 }
 
 .header-bottom {
@@ -274,24 +279,30 @@ body {
 
   &__container {
     display: flex;
-    padding-top: 34px;
-    padding-bottom: 66px;
+    padding-top: 30px;
+    padding-bottom: 68px;
   }
 }
 
 .left-hero {
   display: block;
   position: relative;
-  background: url(../img/pictures/hero-one__1920.png);
+  background: url(../img/pictures/hero-one__1920.jpg);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
   width: 50%;
-  min-height: 632px;
+  height: 100%;
+  min-height: 630px;
   margin-right: 30px;
-  padding-top: 392px;
+  padding-top: 406px;
   padding-left: 60px;
-  border-radius: 24px;
+  transform: translateY(10px);
+
+  &__hashtag {
+    top: 16px;
+    right: 16px;
+  }
 
   &__author {
     display: block;
@@ -299,7 +310,6 @@ body {
     font-size: $textSizePrimary;
     line-height: 19px;
     color: $whiteColor;
-    margin-bottom: 5px;
   }
 
   &__title {
@@ -307,9 +317,9 @@ body {
     font-family: $secondFontFamily;
     font-weight: $textWeightBold;
     font-size: $textSizeNine;
-    line-height: 46px;
+    line-height: 38px;
     color: $whiteColor;
-    margin-bottom: 27px;
+    margin-bottom: 35px;
   }
 
   &__link {
@@ -341,7 +351,6 @@ body {
   width: 50%;
 
   &__picture {
-    border-radius: 24px;
     width: 100%;
     height: 100%;
     object-fit: cover;
@@ -349,10 +358,13 @@ body {
 
   &__title {
   font-size: 24px;
-  margin-bottom: 13px;
+  margin-bottom: 21px;
   }
 
   &__list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(auto, 300px) minmax(auto, 300px));
     grid-template-rows: 300px 257px;
@@ -381,7 +393,7 @@ body {
     display: flex;
     justify-content: space-between;
     padding-top: 28px;
-    padding-bottom: 66px;
+    padding-bottom: 69px;
   }
 }
 
@@ -424,8 +436,7 @@ body {
     padding-left: 23px;
     border: 1px solid transparent;
     background-color: $tenColor;
-    border-radius: 8px;
-    margin-right: 20px;
+    margin-right: 27px;
     color: $whiteColor;
     outline: none;
     transition: $primaryTransition;
@@ -451,7 +462,7 @@ body {
   }
 
   &__button {
-    padding: 15px 22px;
+    padding: 13px 20px;
     border: 3px solid transparent;
     transition: $primaryTransition;
     outline: none;
@@ -477,7 +488,7 @@ body {
 
   &__container {
     padding-top: 69px;
-    padding-bottom: 63px;
+    padding-bottom: 66px;
   }
 
   &__title {
@@ -485,8 +496,11 @@ body {
   }
 
   &__list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(auto, 190px) minmax(auto, 190px) minmax(auto, 190px) minmax(auto, 300px) minmax(auto, 300px));
+    grid-template-columns: minmax(auto, 190px) minmax(auto, 190px) minmax(auto, 190px) minmax(auto, 300px) minmax(auto, 300px);
     grid-template-rows: 300px 300px;
     gap: 30px;
   }
@@ -494,91 +508,96 @@ body {
   &__item {
     position: relative;
     background-repeat: no-repeat;
-    border-radius: 24px;
+    background-size: cover;
+  }
+
+  &__picture {
+    margin-bottom: 16px;
+    min-height: 100%;
+    z-index: -1;
+  }
+
+  &__picture_one {
+    height: 184px;
+  }
+
+  &__picture_two {
+    height: 184px;
+  }
+
+  &__picture_three {
+    height: 184px;
+  }
+
+  &__picture_four {
+    position: absolute;
+    height: 300px;
+  }
+
+  &__picture_five {
+    position: absolute;
+    height: 300px;
+  }
+
+  &__picture_six {
+    height: 184px;
+  }
+
+  &__picture_seven {
+    height: 184px;
   }
 
   &__box {
-    padding-top: 204px;
+    position: relative;
   }
 
   &__item_one {
-    background-image: url(/img/pictures/projects-one__1920.png);
-    max-width: 190px;
-    height: 184px;
     grid-column: span 1;
   }
 
   &__item_two {
-    background-image: url(/img/pictures/projects-two__1920.png);
-    max-width: 190px;
-    height: 184px;
     grid-column: span 1;
   }
 
   &__item_three {
-    background-image: url(/img/pictures/projects-three__1920.png);
-    max-width: 190px;
-    height: 184px;
     grid-column: span 1;
   }
 
   &__item_four {
-    background-image: url(/img/pictures/projects-four__1920.png);
-    max-width: 630px;
-    height: 300px;
-    padding-top: 22px;
-    padding-left: 30px;
     grid-column: span 2;
   }
 
   &__item_five {
-    background-image: url(/img/pictures/projects-five__1920.png);
-    max-width: 630px;
-    height: 300px;
-    padding-top: 22px;
-    padding-left: 30px;
     grid-column: span 3;
   }
 
   &__item_six {
-    background-image: url(/img/pictures/projects-six__1920.png);
-    max-width: 300px;
-    height: 184px;
     grid-column: span 1;
   }
 
   &__item_seven {
-    background-image: url(/img/pictures/projects-seven__1920.png);
-    max-width: 300px;
-    height: 184px;
     grid-column: span 1;
+  }
+
+  &__indent {
+    padding-top: 21px;
+    padding-left: 30px;
   }
 }
 
 .item-projects {
 
-  &__desc {
-    font-weight: $textWeightRegular;
-    font-size: $textSizePrimary;
-    line-height: 22px;
-    color: $fifthColor;
-    margin-bottom: 8px;
-    overflow: hidden;
-    display: -webkit-box;
-    -webkit-line-clamp: 3;
-    -webkit-box-orient: vertical;
-  }
-
   &__desc_four {
     color: $whiteColor;
     width: 294px;
-    margin-bottom: 38px;
+    line-height: 21px;
+    margin-bottom: 53px;
   }
 
   &__desc_five {
     color: $whiteColor;
     width: 294px;
-    margin-bottom: 92px;
+    margin-bottom: 108px;
   }
 
   &__date {
@@ -586,9 +605,8 @@ body {
     align-items: center;
     font-weight: $textWeightRegular;
     font-size: $textSizeThird;
-    line-height: 22px;
+    line-height: 20px;
     color: $seventhColor;
-    margin-bottom: 2px;
   }
 
   &__date::before {
@@ -607,9 +625,21 @@ body {
     font-family: $secondFontFamily;
     font-weight: $textWeightBold;
     font-size: $textSizeSeventh;
-    line-height: 32px;
+    line-height: 26px;
     color: $whiteColor;
-    margin-bottom: 6px;
+    margin-bottom: 8px;
+  }
+
+  &__subtitle {
+    font-weight: $textWeightRegular;
+    font-size: $textSizePrimary;
+    line-height: 22px;
+    color: $fifthColor;
+    margin-bottom: 11px;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
   }
 
   &__btn {
@@ -620,7 +650,6 @@ body {
     color: $whiteColor;
     background-color: transparent;
     border: 3px solid $primaryColor;
-    border-radius: 8px;
     padding: 11px 19px;
     outline: none;
     transition: background-color .3s, border-color .2s ease-in-out;
@@ -649,33 +678,35 @@ body {
   &__container {
     display: flex;
     justify-content: space-between;
-    padding-bottom: 68px;
+    padding-bottom: 64px;
   }
 }
 .contacts-left {
   position: relative;
   width: 68%;
-  margin-right: 10px;
+  margin-right: 20px;
 
   &__title {
-    margin-bottom: 12px;
+    margin-bottom: 22px;
   }
 }
 
 .left-box {
   position: absolute;
   background: $backgroundColor;
-  border-radius: 24px;
   width: 407px;
-  height: 480px;
-  padding-top: 165px;
-  padding-left: 55px;
+  min-height: 460px;
+  padding-top: 169px;
+  padding-left: 60px;
+  padding-right: 60px;
   z-index: 1;
+  transform: translateX(-100%);
   opacity: 0;
-  transition: opacity .3s ease-in-out;
+  transition: transform .5s, opacity .5s ease-in-out;
 
   &.active {
     opacity: 1;
+    transform: translateX(0);
     visibility: visible;
   }
 
@@ -687,7 +718,6 @@ body {
     font-size: $textSizeSeventh;
     line-height: 32px;
     margin: 0;
-    margin-bottom: 6px;
     padding: 0;
   }
 
@@ -698,7 +728,7 @@ body {
     font-weight: $textWeightRegular;
     font-size: $textSizePrimary;
     line-height: 28px;
-    margin-bottom: 6px;
+    margin-bottom: 3px;
   }
 
   &__tel {
@@ -736,9 +766,8 @@ body {
     font-family: $secondFontFamily;
     font-weight: $textWeightRegular;
     font-size: $textSizeSeventh;
-    line-height: 32px;
+    line-height: 30px;
     color: $fifthColor;
-    margin-bottom: 7px;
   }
 
   &__desc {
@@ -752,10 +781,9 @@ body {
 
   &__name,&__email,&__text {
     width: 100%;
-    height: 50px;
+    min-height: 50px;
     background-color: $nineColor;
     border: 1px solid transparent;
-    border-radius: 8px;
     outline: none;
     padding-left: 23px;
     margin-bottom: 20px;
@@ -765,7 +793,7 @@ body {
     border: 1px solid red;
   }
 
-  &__item {
+  &__validate {
     position: relative;
   }
 
@@ -789,7 +817,7 @@ body {
   &__text {
     resize: none;
     padding-top: 15px;
-    height: 150px;
+    min-height: 150px;
   }
 
   &__button {
@@ -823,16 +851,7 @@ body {
 .map {
   display: block;
   max-width: 850px;
-  height: 480px;
-  border-radius: 24px;
-}
-
-.ymaps-2-1-79-inner-panes {
-  border-radius: 24px;
-}
-
-.ymaps-2-1-79-map {
-  border-radius: 24px;
+  min-height: 460px;
 }
 
 [class*="ymaps-2"][class*="-ground-pane"]{
@@ -840,16 +859,14 @@ body {
   -webkit-filter:grayscale(100%);
 }
 
-/*/ CONTACTS /*/
+/*/ FOOTER /*/
 
 .site-footer {
   background-color: $fifthColor;
-  border-top-left-radius: 24px;
-  border-top-right-radius: 24px;
 
   &__container {
     display: flex;
-    height: 106px;
+    min-height: 106px;
     align-items: center;
   }
 }
@@ -930,31 +947,9 @@ body {
     justify-content: space-evenly;
     align-items: center;
     width: auto;
-  }
-
-  &__icon {
-    outline: none;
-  }
-
-  &__icon svg {
-    fill: $fourthColor;
-    transition: fill .3s ease-in-out;
-  }
-
-  &__icon:not(:last-child) {
-    margin-right: 20px;
-  }
-
-  &__icon:hover svg {
-    fill: $primaryColor;
-  }
-
-  &__icon.focus-visible svg {
-      fill: $secondColor;
-  }
-
-  &__icon:active svg {
-      fill: $thirdColor;
+    list-style: none;
+    margin: 0;
+    padding: 0;
   }
 }
 

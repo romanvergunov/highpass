@@ -10,7 +10,8 @@
     "clean": "gulp clean",
     "watch": "gulp watch",
     "dev": "gulp build",
-    "prod": "gulp build --prod"
+    "prod": "gulp build --prod",
+    "start": "gulp start"
   },
   "author": "romanvergunov",
   "license": "MIT",

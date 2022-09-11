@@ -44,5 +44,15 @@ const watch = series(
   fileWatch,
 );
 
+const start = series(
+  build,
+  sprites,
+  picturesJpg,
+  picturesPng,
+  picturesFavicon,
+  fileWatch,
+);
+
 exports.build = build;
 exports.watch = watch;
+exports.start = start;

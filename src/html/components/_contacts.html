@@ -1,4 +1,4 @@
-<section class="site-contacts site__contacts">
+<section class="site-contacts">
   <div class="container site-contacts__container">
     <div class="contacts-left site-contacts__left">
       <h2 class="title contacts-left__title">
@@ -27,18 +27,16 @@
         Оставьте ваши данные, указав в&nbsp;графе &laquo;Комментарий&raquo; желаемые время и&nbsp;дату съемки или другого мероприятия
       </p>
       <form class="contacts-right__form" id="contactsForm" name="form" method="get" action="#">
-        <ul class="contacts-right__list">
-          <li class="contacts-right__item">
-            <input class="contacts-right__name" id="name" name="name" type="text" placeholder="Имя" aria-label="Поле для ввода имени">
-          </li>
-          <li class="contacts-right__item">
-            <input class="contacts-right__email" id="email" name="email" type="email" placeholder="E-mail" aria-label="Поле для ввода E-mail">
-          </li>
-          <li class="contacts-right__item">
-            <textarea class="contacts-right__text" id="text" name="text" placeholder="Комментарий" aria-label="Поле для ввода текста"></textarea>
-          </li>
-        <button class="btn contacts-right__button" type="submit">Отправить</button>
-      </ul>
+        <div class="contacts-right__validate">
+          <input class="contacts-right__name" id="name" name="name" type="text" placeholder="Имя" aria-label="Поле для ввода имени">
+        </div>
+        <div class="contacts-right__validate">
+          <input class="contacts-right__email" id="email" name="email" type="email" placeholder="E-mail" aria-label="Поле для ввода E-mail">
+        </div>
+        <div class="contacts-right__validate">
+          <textarea class="contacts-right__text" id="text" name="text" placeholder="Комментарий" aria-label="Поле для ввода текста"></textarea>
+        </div>
+      <button class="btn contacts-right__button" type="submit">Отправить</button>
       </form>
     </div>
   </div>

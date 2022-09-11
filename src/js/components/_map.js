@@ -27,7 +27,7 @@ window.addEventListener('scroll', () => {
 
       const myPlacemark = new ymaps.Placemark([55.769535, 37.639985], {}, {
         iconLayout: 'default#image',
-        iconImageHref: '../img/sprites/sprite.svg#marker',
+        iconImageHref: '../img/pictures/contacts-marker__1920.png',
         iconImageSize: [12, 12],
         iconImageOffset: [10, 10],
       });
