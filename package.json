@@ -59,6 +59,7 @@
   },
   "dependencies": {
     "focus-visible": "^5.2.0",
+    "gsap": "^3.11.1",
     "just-validate": "^3.5.2",
     "superplaceholder": "^1.0.0"
   }

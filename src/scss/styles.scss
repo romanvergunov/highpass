@@ -15,6 +15,19 @@ body {
   min-width: 320px;
 }
 
+.hellopreloader {
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 99999;
+  display: block;
+  width: 100%;
+  height: 100%;
+  background: $primaryColor url(http://hello-site.ru//main/images/preloads/grid.svg) center center no-repeat;
+  background-position: center;
+  background-size: 73px;
+}
+
 .visually-hidden {
   position: absolute;
   margin: -1px;

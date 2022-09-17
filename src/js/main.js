@@ -1,5 +1,7 @@
 import 'focus-visible';
 
+import './components/_animation';
+
 import './components/_burger';
 
 import './components/_map';

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html class="html" lang="ru">
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -12,8 +12,8 @@
   <link href="fonts/ttfirsneue/tt-firs-neue-bold.woff2" rel="preload" crossorigin=""  as="font">
   <link href="fonts/ttfirsneue/tt-firs-neue-regular.woff2" rel="preload" crossorigin=""  as="font">
 </head>
-<body>
-<main>
+<body class="body">
+<main class="main">
     <!-- SITE HEADER -->
 @include('html/components/_header.html')
 
@@ -32,7 +32,8 @@
 
   <!-- SITE FOOTER -->
 @include('html/components/_footer.html')
-
+<div id="hellopreloader" class="hellopreloader"></div>
+<script type="text/javascript">var hellopreloader = document.getElementById("hellopreloader");function fadeOutnojquery(el){el.style.opacity = 1;var interhellopreloader = setInterval(function(){el.style.opacity = el.style.opacity - 0.05;if (el.style.opacity <=0.05){ clearInterval(interhellopreloader);hellopreloader.style.display = "none";}},16);}window.onload = function(){setTimeout(function(){fadeOutnojquery(hellopreloader);},700);};</script>
 <script src="js/main.min.js"></script>
 <script src="https://api-maps.yandex.ru/2.1/?apikey=вашAPI-ключ&lang=ru_RU"></script>
 </body>
